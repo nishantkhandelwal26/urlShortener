@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Roboto", sans-serif;
+  }
+
+  body {
+    background-color: #f8fafc;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .font-roboto {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .font-montserrat {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .btn-primary {
+    @apply bg-custom-gradient text-white rounded-md py-2 px-6 font-medium transition-all duration-200 hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-btnColor;
+  }
+
+  .btn-secondary {
+    @apply border-btnColor border text-btnColor rounded-md py-2 px-6 font-medium transition-all duration-200 hover:bg-btnColor hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-btnColor;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-pointer;
+  }
+
+  .nav-link {
+    @apply transition-all duration-200 hover:text-white;
+  }
+
+  .nav-link.active {
+    @apply text-white font-semibold;
+  }
+
+  .nav-link.inactive {
+    @apply text-gray-200;
+  }
+
+  .mobile-menu {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .input-field {
+    @apply appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-btnColor focus:border-btnColor focus:z-10 sm:text-sm transition-all duration-200;
+  }
+
+  .input-field:focus {
+    @apply shadow-md;
+  }
+}
